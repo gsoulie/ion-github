@@ -1,0 +1,26 @@
+<ion-menu [content]="content">
+
+  <ion-toolbar first>
+    <ion-title>Github users</ion-title>
+  </ion-toolbar>
+
+  <ion-content>
+
+      <button clear (click)="openDetail($event)">
+        <ion-avatar item-left>
+          <img [src]="user.avatar_url">
+        </ion-avatar>
+        <p>{{user.login}}</p>
+      </button>
+
+
+    <ion-list>
+      <button ion-item *ngFor="let p of pages" (click)="openPage(p)">
+        {{p.title}}
+      </button>
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<ion-nav [root]="rootPage" #content swipe-back-enabled="false"></ion-nav>
