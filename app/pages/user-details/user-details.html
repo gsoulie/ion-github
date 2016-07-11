@@ -62,7 +62,7 @@
           <p>{{rep.description}}</p>
         </ion-item>-->
         <button ion-item *ngFor="let rep of repos" (click)="openRepo(rep.html_url,rep.full_name)">
-          <p>{{rep.full_name}}</p>
+          <p id="reposTitle">{{rep.full_name}}</p>
           <p>{{rep.description}}</p>
         </button>
       </ion-list>
